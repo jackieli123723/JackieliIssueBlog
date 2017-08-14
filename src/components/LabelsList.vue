@@ -1,8 +1,8 @@
 <template>
   <ul class="label-list">
     <li @click="setActiveLabel(null)">
-      <span class="tag" v-if="activeLabel == null" style="background-color: #3593f2;">ALL</span>
-      <span class="tag tag-unchecked" v-else>ALL</span>
+      <span class="tag" v-if="activeLabel == null" style="background-color: #3593f2;">全部</span>
+      <span class="tag tag-unchecked" v-else>全部</span>
     </li>
     <li v-for="label in labels" :key="label.id">
       <span class="tag" v-if="activeLabel != null && activeLabel.name === label.name" @click="setActiveLabel(null)"

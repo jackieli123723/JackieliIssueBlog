@@ -5,6 +5,9 @@
 
 html, body {
   height: 100%;
+  color: rgb(102, 102, 102);
+  font-size:14px;
+    font-family: "Microsoft YaHei", arial, SimSun, 宋体;
 }
 
 a {

@@ -1,7 +1,7 @@
 <template>
   <div class="blog-list-container">
     <div class="table-header">
-      <span>名称</span>
+      <span>文章标题</span>
       <span>创建时间</span>
     </div>
     <ul class="issue-list" ref="issueList">
@@ -18,9 +18,12 @@
           {{$moment(issue.created_at).format('YYYY-MM-DD HH:mm')}}
         </span>
       </li>
+      <div v-show="issues.length == 0" class="no-data">
+        <p>您还没发表过该类型文章哦，去<span @click="openThirdPartySite('https://github.com/jackieli123723/jackieli123723.github.io/issues')">写博客～</span></p>
+      </div>
     </ul>
     <div class="bottom-bar">
-      <input type="text" class="fl query" v-model="keyword" placeholder="Search issues"
+      <input type="text" class="fl query" v-model="keyword" placeholder="按文章标题搜索..."
              @keyup.enter="searchIssues()"/>
       <pagination :totalNum="totalNum" :currentPage="currentPage" :pageSize="pageSize"
                   @currentPageChanged="handleCurrentPageChanged"/>
@@ -29,6 +32,28 @@
 </template>
 <style lang="scss" scoped>
   $time-width: 150px;
+
+  .no-data{
+    background: url(../assets/noData.png) no-repeat scroll center 0 transparent;
+    padding-top: 146px;
+    width: 488px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin-left:110px;
+    text-align: center;
+   
+    p{
+       font-size:14px;
+       span{
+        color: #3b8cff;
+        cursor:pointer
+       
+      }
+    }
+     
+  }
 
   .blog-list-container {
     flex-grow: 1;
@@ -45,7 +70,7 @@
     padding: 0px 70px;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
-    font-size: 12px;
+    font-size: 14px;
     color: #a3b4bc;
     :first-child {
       flex-grow: 1;
@@ -148,6 +173,9 @@
       ...mapActions([
         'updateActiveLabel'
       ]),
+      openThirdPartySite (url) {
+        window.open(url)
+      },
       setActiveLabel (label) {
         this.updateActiveLabel(label)
       },

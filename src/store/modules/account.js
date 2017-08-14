@@ -26,7 +26,7 @@ const state = {
     },
     {
       img: 'static/img/weibo.png',
-      url: 'http://weibo.com/无泪的遗憾jackieli'
+      url: 'http://weibo.com/1762791445/profile?rightmod=1&wvr=6&mod=personinfo'
     }
   ]
 }
