@@ -12,6 +12,9 @@ Vue.prototype.$message = Message
 import BgaBackTop from 'bga-back-top-vue'
 Vue.use(BgaBackTop)
 
+import TouchRipple from 'vue-touch-ripple'
+Vue.use(TouchRipple)
+
 import lodash from 'lodash'
 import moment from 'moment'
 import marked from 'marked'

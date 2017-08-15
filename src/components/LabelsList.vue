@@ -1,13 +1,13 @@
 <template>
   <ul class="label-list">
-    <li @click="setActiveLabel(null)">
+    <li @click="setActiveLabel(null)"  v-touch-ripple>
       <span class="tag" v-if="activeLabel == null" style="background-color: #3593f2;">全部</span>
       <span class="tag tag-unchecked" v-else>全部</span>
     </li>
-    <li v-for="label in labels" :key="label.id">
-      <span class="tag" v-if="activeLabel != null && activeLabel.name === label.name" @click="setActiveLabel(null)"
-            :style="{ backgroundColor: '#' + label.color}">{{label.name}}</span>
-      <span v-else class="tag tag-unchecked" @click="setActiveLabel(label)">{{label.name}}</span>
+    <li v-for="label in labels" :key="label.id" >
+      <span  class="tag" v-if="activeLabel != null && activeLabel.name === label.name" @click="setActiveLabel(null)"
+            :style="{ backgroundColor: '#' + label.color}" v-touch-ripple>{{label.name}}</span>
+      <span v-else class="tag tag-unchecked" @click="setActiveLabel(label)" v-touch-ripple>{{label.name}}</span>
     </li>
   </ul>
 </template>

@@ -4,7 +4,7 @@
       <span>文章标题</span>
       <span>创建时间</span>
     </div>
-    <ul class="issue-list" ref="issueList">
+    <ul v-if="issues && issues.length > 0" class="issue-list" ref="issueList">
       <li class="issue-item" v-for="issue in issues" :key="issue.id">
         <router-link tag="a" :to="{name: 'BlogDetail', params: {number: issue.number, issue: issue}}">
           {{issue.title}}
@@ -18,10 +18,13 @@
           {{$moment(issue.created_at).format('YYYY-MM-DD HH:mm')}}
         </span>
       </li>
-      <div v-show="issues.length == 0" class="no-data">
-        <p>您还没发表过该类型文章哦，去<span @click="openThirdPartySite('https://github.com/jackieli123723/jackieli123723.github.io/issues')">写博客～</span></p>
-      </div>
     </ul>
+
+   <div v-else class="no-data">
+      <div></div>
+      <p>您还没发表过该类型文章哦，去<span @click="openThirdPartySite('https://github.com/jackieli123723/jackieli123723.github.io/issues')">写博客～</span></p>
+   </div>
+
     <div class="bottom-bar">
       <input type="text" class="fl query" v-model="keyword" placeholder="按文章标题搜索..."
              @keyup.enter="searchIssues()"/>
@@ -33,26 +36,29 @@
 <style lang="scss" scoped>
   $time-width: 150px;
 
-  .no-data{
-    background: url(../assets/noData.png) no-repeat scroll center 0 transparent;
-    padding-top: 146px;
-    width: 488px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    margin-left:110px;
-    text-align: center;
-   
-    p{
-       font-size:14px;
+
+    .no-data {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      flex: 1 0 160px;
+      background: url(../assets/noData.png) no-repeat bottom;
+    }
+    p {
+      flex-grow: 1;
+      text-align: center;
+      padding: 30px;
+      color: #666666;
+      font-size: 14px;
        span{
         color: #3b8cff;
         cursor:pointer
        
       }
     }
-     
   }
 
   .blog-list-container {
@@ -195,7 +201,9 @@
           pageSize: this.pageSize
         }).then(response => {
           // 加载完数据后滚动到顶部
-          this.$refs.issueList.scrollTop = 0
+          if (this.$refs.issueList) {
+            this.$refs.issueList.scrollTop = 0
+          }
           this.totalNum = response.data.total_count
           this.issues = response.data.items
         })

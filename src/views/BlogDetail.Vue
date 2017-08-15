@@ -4,7 +4,7 @@
       <span class="title">{{issue.title}}</span>
       <ul>
         <li class="tag tag-small" v-for="label in issue.labels" :key="label.id" @click="setActiveLabel(label)"
-            :style="{ backgroundColor: '#' + label.color}">{{label.name}}
+            :style="{ backgroundColor: '#' + label.color}" v-touch-ripple>{{label.name}}
         </li>
       </ul>
       <span class="back" @click="back">
