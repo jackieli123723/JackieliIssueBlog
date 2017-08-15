@@ -83,3 +83,157 @@ a {
   white-space: pre-wrap;
   color: #ffffff;
 }
+
+
+
+/* 滚动条css scrollbar */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+
+/* Turn on single button up on top, and down on bottom */
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+
+/* Turn off the down area up on top, and up area on bottom */
+
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background: url(../assets/scroll.png) no-repeat;
+}
+/*竖向滚动条-下方按钮*/
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    width: 6px;
+    height: 6px;
+    background-position: -2px -10px;
+}
+
+
+/*竖向滚动条-下方按钮-悬浮样式*/
+
+::-webkit-scrollbar-button:vertical:end:hover {
+    background-position: -1px 0px;
+}
+
+
+/*竖向滚动条-上方按钮*/
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-position: -12px -12px;
+    height: 6px;
+    width: 6px;
+}
+
+
+/*竖向滚动条-上方按钮-悬浮样式*/
+
+::-webkit-scrollbar-button:vertical:start:hover {
+    background-position: -12px -2px;
+}
+
+
+/*竖向滚动条顶部背景 */
+
+::-webkit-scrollbar-track-piece:vertical:start {
+    background: #fff;
+}
+
+
+/* 竖向滚动条底部背景 */
+
+::-webkit-scrollbar-track-piece:vertical:end {
+    background: #fff;
+}
+
+
+/* 竖向滚动条*/
+
+::-webkit-scrollbar-thumb:vertical {
+    background: #ccd5d9;
+    border-radius: 4px;
+}
+
+
+/* 竖向滚动条-悬浮样式*/
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background: #a7d9f8;
+}
+
+
+/* Place The scroll down button at the bottom */
+
+::-webkit-scrollbar-button:horizontal:end:decrement {
+    background-position: -30px -11px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button:horizontal:end:hover {
+    background-position: -30px -1px;
+}
+
+
+/*横向滚动条-右边按钮 */
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background-position: -31px -11px;
+    height: 6px;
+    width: 6px;
+}
+
+
+/*横向滚动条-左边边按钮*/
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background-position: -23px -11px;
+    width: 6px;
+}
+
+
+/*横向滚动条-左边边按钮-悬浮样式*/
+
+::-webkit-scrollbar-button:horizontal:start:hover {
+    background-position: -23px -1px;
+}
+
+
+/* 横向滚动条背景-左边背景 */
+
+::-webkit-scrollbar-track-piece:horizontal:start {
+    background: #fff;
+}
+
+
+/* 横向滚动条背景-右边背景 */
+
+::-webkit-scrollbar-track-piece:horizontal:end {
+    background: #fff;
+}
+
+
+/* The thumb itself */
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #ccd5d9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: #a7d9f8;
+}
