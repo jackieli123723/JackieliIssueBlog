@@ -16,7 +16,7 @@
         <router-link :class="isBlog ? 'selected-menu':''" tag="li" :to="{name: 'BlogList'}" v-touch-ripple>个人博客</router-link>
         <div class="line30"></div>
       <!--   <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}">作品合集</router-link> -->
-        <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}" v-touch-ripple>关于我</router-link>
+        <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}" v-touch-ripple>关于博客</router-link>
       </ul>
       <div v-if="showWeiXinGroup" class="weixin-group">
         <span>公众号</span>
