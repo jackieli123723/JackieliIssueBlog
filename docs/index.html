@@ -1,4 +1,14 @@
-<!DOCTYPE html><html><head><title>致力于web前端开发,前端学习交流-西门互联</title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=description content=这是一个神奇的网站--致力于web前端开发，我们在路上--西门互联><meta property=og:type content=website><meta property=og:title content=致力于web前端开发,前端学习交流><meta property=og:url content=https://jackieli123723.github.io/index.html><meta property=og:site_name content=致力于web前端开发,前端学习交流><meta property=og:description content=这是一个神奇的网站--致力于web前端开发，我们在路上--西门互联><meta name=twitter:card content=summary><meta name=twitter:title content=致力于web前端开发,前端学习交流><meta name=twitter:description content=这是一个神奇的网站--致力于web前端开发，我们在路上--西门互联><link href=./static/img/favicon.ico rel=icon type=image/x-icon><link href=./static/img/favicon.ico rel="shortcut icon" type=image/x-icon><link href=./static/img/favicon.ico rel=bookmark type=image/x-icon><style>.loading-overlay {
+<!DOCTYPE html><html><head><title>致力于web前端开发,前端学习交流-西门互联</title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta name=description content=这是一个神奇的网站--致力于web前端开发，我们在路上--西门互联><meta property=og:type content=website><meta property=og:title content=致力于web前端开发,前端学习交流><meta property=og:url content=https://jackieli123723.github.io/index.html><meta property=og:site_name content=致力于web前端开发,前端学习交流><meta property=og:description content=这是一个神奇的网站--致力于web前端开发，我们在路上--西门互联><meta name=twitter:card content=summary><meta name=twitter:title content=致力于web前端开发,前端学习交流><meta name=twitter:description content=这是一个神奇的网站--致力于web前端开发，我们在路上--西门互联><link href=./static/img/favicon.ico rel=icon type=image/x-icon><link href=./static/img/favicon.ico rel="shortcut icon" type=image/x-icon><link href=./static/img/favicon.ico rel=bookmark type=image/x-icon><style>.social-share .icon-wechat .wechat-qrcode{
+        top: 40px !important;
+      }
+      .social-share .icon-wechat .wechat-qrcode:after {
+        top: -13px !important;
+        border-color:  transparent transparent #fff transparent !important;
+    }
+    .social-share .icon-wechat .wechat-qrcode h4{
+      background-color: #fff !important;
+    }
+ .loading-overlay {
     position: fixed;
     left: 0;
     top: 0;
@@ -243,8 +253,16 @@
     -o-transform: translate(0,-2000px);
     -ms-transform: translate(0,-2000px);
   }
-}</style><link href=./static/css/app.eae559904662574fc58c2b06908f3e8f.css rel=stylesheet></head><body><div id=stars></div><div id=stars2></div><div id=stars3></div><div id=preloader class=loading-overlay><div id=loader>&nbsp;</div></div><script type=text/javascript>function htmlLoadOver() {
+}</style><link href=./static/css/app.eae559904662574fc58c2b06908f3e8f.css rel=stylesheet></head><body><div id=stars></div><div id=stars2></div><div id=stars3></div><div id=preloader class=loading-overlay><div id=loader>&nbsp;</div></div><script type=text/javascript>var first_sceen__time = (+new Date());//记录页面初始化时间埋点统计监控
+
+     function htmlLoadOver() {
           document.getElementById('preloader').className = "loading-overlay loaded";
+          if (!!window.addEventListener) {
+              window.addEventListener("load", function() {
+                  window.onload_endtime = +new Date();
+                  console.log('首屏加载耗时：'+ (window.onload_endtime - window.first_sceen__time) +'ms')
+              });
+          }
       }
       function complete() {
         if (document.readyState == "complete") {
@@ -263,4 +281,4 @@
   hm.src = "https://hm.baidu.com/hm.js?e29018445c170dcc451185e65ed5db28";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
-})();</script><script type=text/javascript src=./static/js/manifest.8c6c1b1e7e43311cfde0.js></script><script type=text/javascript src=./static/js/vendor.e6988b516858b33a14a3.js></script><script type=text/javascript src=./static/js/app.23b42ec4edd5b55c75f6.js></script></body></html>
+})();</script><script type=text/javascript src=./static/js/manifest.e3a65b2fbd14c7868844.js></script><script type=text/javascript src=./static/js/vendor.6a1c5259ced184c1a0bf.js></script><script type=text/javascript src=./static/js/app.8b40d6993b50dec1251e.js></script></body></html>

@@ -5,12 +5,32 @@
         <img :src="comment.user.avatar_url">
         <span>{{comment.user.login}}</span>
       </div>
+
       <span class="time">{{$moment(comment.created_at).format('YYYY-MM-DD HH:mm')}}</span>
+    </div>
+    <div class="share-box">
+      <span>分享到：</span>
+      <share :config="config"></share>
     </div>
     <article class="markdown-body" v-html="renderedMarkdown"/>
   </div>
 </template>
 <style lang="scss" scoped>
+@import '../../node_modules/social-share.js/dist/css/share.min.css';
+  .share-box{
+   margin-top:16px;
+   position:relative;
+   padding-left:80px;
+
+   span{
+    position: absolute;
+    left:14px;
+    line-height:40px;
+   }
+
+  
+  }
+
   .comment {
     margin-top: 30px;
     border-radius: 4px;
@@ -52,10 +72,14 @@
   }
 </style>
 <script>
+  import '../../node_modules/social-share.js/dist/js/social-share.min.js'
+  import config from './config.js'
+
   export default {
     data () {
       return {
-        renderedMarkdown: ''
+        renderedMarkdown: '',
+        config: config
       }
     },
     props: ['comment'],

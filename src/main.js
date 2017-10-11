@@ -15,6 +15,9 @@ Vue.use(BgaBackTop)
 import TouchRipple from 'vue-touch-ripple'
 Vue.use(TouchRipple)
 
+import Share from 'vue-social-share'
+Vue.use(Share)
+
 import lodash from 'lodash'
 import moment from 'moment'
 import marked from 'marked'

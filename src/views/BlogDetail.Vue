@@ -66,7 +66,6 @@
 
   .comment-container {
     flex-grow: 1;
-    overflow-y: auto;
     padding: 0px 50px;
   }
 </style>
@@ -123,6 +122,8 @@
     created () {
       if (this.$route.params.issue) {
         this.issue = this.$route.params.issue
+        document.title = this.issue.title
+        window.localStorage.setItem('title', document.title)
       } else {
         if (this.$route.params.number) {
           this.number = this.$route.params.number

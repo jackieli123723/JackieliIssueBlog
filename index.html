@@ -18,6 +18,16 @@
   <link href="./static/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="./static/img/favicon.ico" rel="bookmark" type="image/x-icon"/>
   <style>
+     .social-share .icon-wechat .wechat-qrcode{
+        top: 40px !important;
+      }
+      .social-share .icon-wechat .wechat-qrcode:after {
+        top: -13px !important;
+        border-color:  transparent transparent #fff transparent !important;
+    }
+    .social-share .icon-wechat .wechat-qrcode h4{
+      background-color: #fff !important;
+    }
  .loading-overlay {
     position: fixed;
     left: 0;
@@ -277,8 +287,16 @@
         <div id="loader">&nbsp;</div>
     </div>
     <script type="text/javascript">
+    var first_sceen__time = (+new Date());//记录页面初始化时间埋点统计监控
+
      function htmlLoadOver() {
           document.getElementById('preloader').className = "loading-overlay loaded";
+          if (!!window.addEventListener) {
+              window.addEventListener("load", function() {
+                  window.onload_endtime = +new Date();
+                  console.log('首屏加载耗时：'+ (window.onload_endtime - window.first_sceen__time) +'ms')
+              });
+          }
       }
       function complete() {
         if (document.readyState == "complete") {
