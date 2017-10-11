@@ -73,13 +73,11 @@
 </style>
 <script>
   import '../../node_modules/social-share.js/dist/js/social-share.min.js'
-  import config from './config.js'
-
   export default {
     data () {
       return {
         renderedMarkdown: '',
-        config: config
+        config: {}
       }
     },
     props: ['comment'],
