@@ -33,6 +33,8 @@ import './css/main.css'
 import { gitHubApi, isGetUserInfo, queryParse, queryStringify } from './utils'
 import { showMessage, successMessage, errorMessage, warningMessage, infoMessage } from './utils/toastUtil'
 
+
+
 Vue.prototype._ = lodash
 moment.locale('zh-cn')
 Vue.prototype.$moment = moment

@@ -8,7 +8,7 @@
 
       <span class="time">{{$moment(comment.created_at).format('YYYY-MM-DD HH:mm')}}</span>
     </div>
-    <div class="share-box">
+    <div class="share-box" v-if="share">
       <span>分享到：</span>
       <share :config="config"></share>
     </div>
@@ -73,14 +73,15 @@
 </style>
 <script>
   import '../../node_modules/social-share.js/dist/js/social-share.min.js'
+  import config from './config.js'
   export default {
     data () {
       return {
         renderedMarkdown: '',
-        config: {}
+        config: config
       }
     },
-    props: ['comment'],
+    props: ['comment','share'],
     methods: {
       renderMarkdown () {
         this.renderedMarkdown = ''

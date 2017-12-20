@@ -1,0 +1,105 @@
+{
+    "timeStamp": 1513740317306,
+    "user": {
+        "hireable": false,
+        "createdAt": 1419920596000,
+        "collaborators": 0,
+        "diskUsage": 0,
+        "followers": 9,
+        "following": 77,
+        "id": 10346511,
+        "ownedPrivateRepos": 0,
+        "privateGists": 0,
+        "publicGists": 0,
+        "publicRepos": 128,
+        "totalPrivateRepos": 0,
+        "avatarUrl": "https://avatars1.githubusercontent.com/u/10346511?v=4",
+        "blog": "http://www.lilidong.cn/",
+        "company": "china",
+        "email": "380863274@qq.com",
+        "gravatarId": "",
+        "htmlUrl": "https://github.com/jackieli123723",
+        "location": "sichuan  chengdu",
+        "login": "jackieli123723",
+        "name": "Jackieli",
+        "type": "User",
+        "url": "https://api.github.com/users/jackieli123723",
+        "plan": null
+    },
+    "quarterCommitCount": {
+        "2016-Q3": 12,
+        "2016-Q4": 35,
+        "2017-Q1": 18,
+        "2017-Q2": 69,
+        "2017-Q3": 147,
+        "2017-Q4": 52
+    },
+    "langRepoCount": {
+        "JavaScript": 16,
+        "HTML": 6,
+        "CSS": 4,
+        "PLpgSQL": 2,
+        "Unknown": 1,
+        "Vue": 1
+    },
+    "langStarCount": {
+        "JavaScript": 3,
+        "PLpgSQL": 3,
+        "CSS": 2,
+        "HTML": 1,
+        "Unknown": 0,
+        "Vue": 0
+    },
+    "langCommitCount": {
+        "PLpgSQL": 153,
+        "JavaScript": 72,
+        "HTML": 60,
+        "CSS": 24,
+        "Vue": 17,
+        "Unknown": 7
+    },
+    "repoCommitCount": {
+        "vue-longyuan-store-front": 104,
+        "vue-longyuan-store-front-mobile": 49,
+        "JackieliIssueBlog": 19,
+        "ssr-vue-longyuan-store-front-mobile": 17,
+        "jackieli123723.github.io": 16,
+        "jackieli-api": 13,
+        "resume": 13,
+        "react-longyuan-store-front-mobile": 10,
+        "vue-node-full-stack-share": 10,
+        "longyuan-data-front-ppt": 9
+    },
+    "repoStarCount": {
+        "vue-longyuan-store-front": 2,
+        "JackieliIssueBlog": 1,
+        "REACT-PC-MOBILE-CLI": 1,
+        "resume": 1,
+        "vue-echart": 1,
+        "vue-longyuan-store-front-mobile": 1,
+        "VUE-PC-MOBILE-CLI": 1,
+        "vue2-vueRouter-vueResource-echart3": 1
+    },
+    "repoCommitCountDescriptions": {
+        "vue-longyuan-store-front": "vue-longyuan-store-front-demo",
+        "vue-longyuan-store-front-mobile": "移动端道具商城",
+        "JackieliIssueBlog": "vue+github的issue搭建的博客",
+        "ssr-vue-longyuan-store-front-mobile": "移动端道具商城vue-ssr方案优化seo",
+        "jackieli123723.github.io": "lilidong 个人博客",
+        "jackieli-api": "jackieli-api",
+        "resume": "resume",
+        "react-longyuan-store-front-mobile": "react16重构商城",
+        "vue-node-full-stack-share": "vue+node全栈开发",
+        "longyuan-data-front-ppt": "数据平台的前端架构+Git使用"
+    },
+    "repoStarCountDescriptions": {
+        "vue-longyuan-store-front": "vue-longyuan-store-front-demo",
+        "JackieliIssueBlog": "vue+github的issue搭建的博客",
+        "REACT-PC-MOBILE-CLI": "react-pc和移动端脚手架",
+        "resume": "resume",
+        "vue-echart": "vue-echart",
+        "vue-longyuan-store-front-mobile": "移动端道具商城",
+        "VUE-PC-MOBILE-CLI": "vue 移动端和pc端脚手架",
+        "vue2-vueRouter-vueResource-echart3": "vue2+vueRouter+vueResource+echart3"
+    }
+}

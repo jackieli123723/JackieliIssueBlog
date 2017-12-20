@@ -29,6 +29,9 @@ module.exports = {
   getReadme (vue) {
     return vue.$http.get(`https://raw.githubusercontent.com/${vue.$store.getters.repo}/master/README.md`)
   },
+  getChart (vue) {
+    return vue.$http.get('/static/json/chart.json')
+  },
   getAccessToken (vue, code) {
     const auth = vue.$store.getters.auth
     return vue.$http.post(auth.proxy, {

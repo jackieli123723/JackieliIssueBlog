@@ -15,13 +15,20 @@
       <ul class="left-menu" >
         <router-link :class="isBlog ? 'selected-menu':''" tag="li" :to="{name: 'BlogList'}" v-touch-ripple>个人博客</router-link>
         <div class="line30"></div>
-      <!--   <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}">作品合集</router-link> -->
         <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}" v-touch-ripple>关于博客</router-link>
+         <div class="line30"></div>
+        <router-link :class="isChart ? 'selected-menu':''" tag="li" :to="{name: 'OpusChart'}">开源项目</router-link>
       </ul>
       <div v-if="showWeiXinGroup" class="weixin-group">
         <span>公众号</span>
         <span>web前端开发</span>
         <img src="/static/img/weixinPublic.jpg">
+      </div>
+      <div class="icon-svg">
+        <img src="/static/img/npm.svg" />
+        <img src="/static/img/rust.svg" />
+        <img src="/static/img/node.svg" />
+        <img src="/static/img/license.svg" />
       </div>
       <div class="powered">
         Powered by <span
@@ -33,7 +40,12 @@
 <style lang="scss" scoped>
   $indicator-color: #3593f2;
 
-
+  .icon-svg{
+    text-align: center;
+    img{
+     display: inline-block;
+    }
+  }
 
   .left-layout-container {
     display: flex;
@@ -192,6 +204,9 @@
       },
       isAboutMe () {
         return this.$route.name === 'AboutMe'
+      },
+      isChart () {
+        return this.$route.name === 'OpusChart'
       }
     },
     methods: {

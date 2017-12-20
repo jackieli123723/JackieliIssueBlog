@@ -13,8 +13,8 @@
       </span>
     </div>
     <div class="comment-container bga-back-top" ref="commentContainer"  >
-      <comment :comment="issue"/>
-      <comment v-for="comment in comments" :key="comment.id" :comment="comment"/>
+      <comment :comment="issue" :share="true"/>
+      <comment v-for="comment in comments" :key="comment.id" :comment="comment" :share="false"/>
       <add-comment :commentsUrl="issue.comments_url" @addCommentSuccess="handleAddCommentSuccess"/>
     </div>
   </div>
