@@ -17,6 +17,7 @@
                 <div><i class="fa fa-fw fa-clock-o"></i>Joined GitHub {{chart.user.createdAt | formatTime}}</div>
                 <div v-if="chart.user.email"><i class="fa fa-fw fa-envelope"></i> {{ chart.user.email }}</div>
                 <div v-if="chart.user.company"><i class="fa fa-fw fa-building"></i>{{ chart.user.company }}</div>
+                <div><i class="fa fa-fw fa-clock-o"></i>Data Update {{chart.timeStamp | formatTime}}</div>
                 <div><i class="fa fa-fw fa-external-link"></i><a :href="chart.user.htmlUrl" target="_blank">View profile on GitHub</a></div>
             </div>
             <div class="chart-container commits-per-quarter">
@@ -26,6 +27,7 @@
   <!--     {{pieChart("langRepoCount", chart).data}}<br/>
        {{pieChart("langRepoCount", chart).options}} -->
       <!-- 5个pie图 -->
+
        <div class="charts">
           <div class="chart-row">
               <div class="chart-container chart-container--third">

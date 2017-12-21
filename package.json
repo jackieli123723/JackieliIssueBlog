@@ -5,10 +5,11 @@
   "author": "JackieliIssueBlog <380863274@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
+    "dev": "npm run api && node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "build": "npm run api && node build/build.js",
+    "lint": "eslint --ext .js,.vue src",
+    "api": "node api.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
