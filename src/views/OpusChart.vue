@@ -16,8 +16,8 @@
                 <div><i class="fa fa-fw fa-database"></i>{{ chart.user.publicRepos }} public repos</div>
                 <div><i class="fa fa-fw fa-clock-o"></i>Joined GitHub {{chart.user.createdAt | formatTime}}</div>
                 <div v-if="chart.user.email"><i class="fa fa-fw fa-envelope"></i> {{ chart.user.email }}</div>
-                <div v-if="chart.user.company"><i class="fa fa-fw fa-building"></i>{{ chart.user.company }}</div>
-                <div><i class="fa fa-fw fa-clock-o"></i>Data Update {{chart.timeStamp | formatTime}}</div>
+                <div v-if="chart.user.location"><i class="fa fa-fw fa-map"></i>{{ chart.user.location }}</div>
+                <div><i class="fa fa-fw fa-calculator"></i>Data Update {{chart.timeStamp | formatTime}}</div>
                 <div><i class="fa fa-fw fa-external-link"></i><a :href="chart.user.htmlUrl" target="_blank">View profile on GitHub</a></div>
             </div>
             <div class="chart-container commits-per-quarter">
