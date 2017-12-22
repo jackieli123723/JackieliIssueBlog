@@ -7,7 +7,7 @@
     
       <!-- github信息 -->
         <div class="user-info">
-            <img :src="chart.user.avatarUrl" :alt="chart.user.login" class="user-info__img">
+            <!-- <img :src="chart.user.avatarUrl" :alt="chart.user.login" class="user-info__img"> -->
             <div class="user-info__details">
                 <div>
                     <i class="fa fa-fw fa-user"></i>{{ chart.user.login }}
@@ -258,8 +258,10 @@ i.fa {
 }
 </style>
 <script>
-import Chart from 'chart.js'
+
 import Charts from './ChartPie.vue'
+Chart.defaults.global.defaultFontFamily = 'Segoe UI'
+Chart.defaults.global.defaultFontSize = 14
 
   export default {
     data () {
@@ -270,9 +272,14 @@ import Charts from './ChartPie.vue'
             datasets: [{
                 label: "Commits",
                 data: [12,35,18,69,147,52],
-                backgroundColor: "rgba(67, 142, 233, 0.2)",
-                borderColor: "rgba(67, 142, 233, 1)",
-                lineTension: 0
+                // backgroundColor: "rgba(67, 142, 233, 0.2)",
+                // borderColor: "rgba(67, 142, 233, 1)",
+                // lineTension: 0
+                
+                 backgroundColor: 'rgba(62, 225, 150, 0.5)' ,
+
+                borderColor: 'rgba(24, 199, 177, 0.72)',
+                borderWidth: 1
             }]
         },
         optionsLine: {
@@ -280,10 +287,11 @@ import Charts from './ChartPie.vue'
             animation: false,
             scales: {
                 xAxes: [{
-                    display: false
+                    display: true
                 }],
                 yAxes: [{
-                    position: "right"
+                    position: "right",
+                    stacked: true
                 }]
             },
             legend: {
