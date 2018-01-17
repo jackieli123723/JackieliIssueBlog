@@ -13,6 +13,7 @@
           <li class="tag tag-small" v-for="label in issue.labels" :key="label.id" @click="setActiveLabel(label)"
               :style="{ backgroundColor: '#' + label.color}" v-touch-ripple>{{label.name}}
           </li>
+          <span class="comment" v-if="issue.comments > 0"><img src="/static/img/p_comments.png" />{{issue.comments}}</span>
         </ul>
         <span class="time">
           {{$moment(issue.created_at).format('YYYY-MM-DD HH:mm')}}
@@ -20,12 +21,13 @@
       </li>
     </ul>
 
-   <div v-else class="no-data">
+
+   <div v-if="(issues && issues.length == 0 ) && totalNum == 0 " class="no-data">
       <div></div>
-      <p>您还没发表过该类型文章哦，去<span @click="openThirdPartySite('https://github.com/jackieli123723/jackieli123723.github.io/issues')">写博客～</span></p>
+      <p>您还没发表过该类型文章哦，去<span>写博客～</span></p>
    </div>
 
-    <div class="bottom-bar">
+    <div class="bottom-bar" v-if="totalNum >=0">
       <input type="text" class="fl query" v-model="keyword" placeholder="按文章标题搜索..."
              @keyup.enter="searchIssues()"/>
       <pagination :totalNum="totalNum" :currentPage="currentPage" :pageSize="pageSize"
@@ -36,6 +38,15 @@
 <style lang="scss" scoped>
   $time-width: 150px;
 
+  .comment{
+    img{
+      vertical-align: middle;
+      margin-top: 2px;
+      padding-right: 6px;
+    }
+    font-size: 14px;
+    color: #4b595f
+  }
 
     .no-data {
     flex-grow: 1;
@@ -56,7 +67,7 @@
        span{
         color: #3b8cff;
         cursor:pointer
-       
+
       }
     }
   }
@@ -155,7 +166,7 @@
     data () {
       return {
         keyword: '',
-        totalNum: 0,
+        totalNum: -1,
         currentPage: 1,
         issues: []
       }
