@@ -1,17 +1,17 @@
 {
-  "timeStamp": 1513929512161,
+  "timeStamp": 1516158410514,
   "user": {
     "hireable": false,
     "createdAt": 1419920596000,
     "collaborators": 0,
     "diskUsage": 0,
     "followers": 9,
-    "following": 78,
+    "following": 79,
     "id": 10346511,
     "ownedPrivateRepos": 0,
     "privateGists": 0,
     "publicGists": 0,
-    "publicRepos": 129,
+    "publicRepos": 132,
     "totalPrivateRepos": 0,
     "avatarUrl": "https://avatars1.githubusercontent.com/u/10346511?v=4",
     "blog": "http://www.lilidong.cn/",
@@ -27,43 +27,54 @@
     "plan": null
   },
   "quarterCommitCount": {
+    "2014-Q4": 0,
+    "2015-Q1": 0,
+    "2015-Q2": 0,
+    "2015-Q3": 0,
+    "2015-Q4": 0,
+    "2016-Q1": 0,
+    "2016-Q2": 0,
     "2016-Q3": 12,
     "2016-Q4": 35,
     "2017-Q1": 18,
     "2017-Q2": 69,
     "2017-Q3": 147,
-    "2017-Q4": 52
+    "2017-Q4": 55,
+    "2018-Q1": 5
   },
   "langRepoCount": {
-    "JavaScript": 16,
+    "JavaScript": 18,
     "HTML": 6,
     "CSS": 4,
+    "Vue": 2,
     "PLpgSQL": 2,
-    "Unknown": 1,
-    "Vue": 1
+    "TypeScript": 1,
+    "Unknown": 1
   },
   "langStarCount": {
-    "JavaScript": 3,
+    "JavaScript": 6,
+    "HTML": 3,
     "PLpgSQL": 3,
     "CSS": 2,
-    "HTML": 2,
-    "Vue": 1,
+    "Vue": 2,
+    "TypeScript": 1,
     "Unknown": 0
   },
   "langCommitCount": {
     "PLpgSQL": 153,
-    "JavaScript": 72,
-    "HTML": 60,
+    "JavaScript": 73,
+    "HTML": 61,
     "CSS": 24,
-    "Vue": 17,
-    "Unknown": 7
+    "Vue": 21,
+    "Unknown": 7,
+    "TypeScript": 2
   },
   "repoCommitCount": {
     "vue-longyuan-store-front": 104,
     "vue-longyuan-store-front-mobile": 49,
     "JackieliIssueBlog": 19,
+    "jackieli123723.github.io": 17,
     "ssr-vue-longyuan-store-front-mobile": 17,
-    "jackieli123723.github.io": 16,
     "jackieli-api": 13,
     "resume": 13,
     "react-longyuan-store-front-mobile": 10,
@@ -71,23 +82,23 @@
     "longyuan-data-front-ppt": 9
   },
   "repoStarCount": {
+    "jackieli123723.github.io": 2,
     "vue-longyuan-store-front": 2,
-    "jackieli123723.github.io": 1,
+    "angular-longyuan-store-front-mobile": 1,
     "JackieliIssueBlog": 1,
+    "longyuan-data-front": 1,
+    "node-website-monitoring": 1,
+    "react-longyuan-store-front-mobile": 1,
     "REACT-PC-MOBILE-CLI": 1,
     "resume": 1,
-    "ssr-vue-longyuan-store-front-mobile": 1,
-    "vue-echart": 1,
-    "vue-longyuan-store-front-mobile": 1,
-    "VUE-PC-MOBILE-CLI": 1,
-    "vue2-vueRouter-vueResource-echart3": 1
+    "ssr-vue-longyuan-store-front-mobile": 1
   },
   "repoCommitCountDescriptions": {
     "vue-longyuan-store-front": "vue-longyuan-store-front-demo",
     "vue-longyuan-store-front-mobile": "移动端道具商城",
     "JackieliIssueBlog": "vue+github的issue搭建的博客",
-    "ssr-vue-longyuan-store-front-mobile": "移动端道具商城vue-ssr方案优化seo",
     "jackieli123723.github.io": "lilidong 个人博客",
+    "ssr-vue-longyuan-store-front-mobile": "移动端道具商城vue-ssr方案优化seo",
     "jackieli-api": "jackieli-api",
     "resume": "resume",
     "react-longyuan-store-front-mobile": "react16重构商城",
@@ -95,15 +106,15 @@
     "longyuan-data-front-ppt": "数据平台的前端架构+Git使用"
   },
   "repoStarCountDescriptions": {
-    "vue-longyuan-store-front": "vue-longyuan-store-front-demo",
     "jackieli123723.github.io": "lilidong 个人博客",
+    "vue-longyuan-store-front": "vue-longyuan-store-front-demo",
+    "angular-longyuan-store-front-mobile": "angular5 改写",
     "JackieliIssueBlog": "vue+github的issue搭建的博客",
+    "longyuan-data-front": "longyuan-data-front game data",
+    "node-website-monitoring": "网站异常监控发送邮件及时排查错误修复",
+    "react-longyuan-store-front-mobile": "react16重构商城",
     "REACT-PC-MOBILE-CLI": "react-pc和移动端脚手架",
     "resume": "resume",
-    "ssr-vue-longyuan-store-front-mobile": "移动端道具商城vue-ssr方案优化seo",
-    "vue-echart": "vue-echart",
-    "vue-longyuan-store-front-mobile": "移动端道具商城",
-    "VUE-PC-MOBILE-CLI": "vue 移动端和pc端脚手架",
-    "vue2-vueRouter-vueResource-echart3": "vue2+vueRouter+vueResource+echart3"
+    "ssr-vue-longyuan-store-front-mobile": "移动端道具商城vue-ssr方案优化seo"
   }
 }
