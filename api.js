@@ -1,6 +1,8 @@
 const https = require('https');
 const fs = require('fs')
-const url = 'https://github-profile-summary.com/api/user/jackieli123723'
+//失效
+//const url = 'https://github-profile-summary.com/api/user/jackieli123723'
+const url = 'https://profile-summary-for-github.com/user/jackieli123723'
 
 https.get(url, (res) => {
   let body = ''
